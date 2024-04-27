@@ -1,0 +1,173 @@
+.cabecalhoMenuHamburguer{
+    width: 24px;
+    height: 24px;
+    background-image: url(../imgs/Menu.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
+.containerBotao:checked~ .containerRotulo > .cabecalhoMenuHamburguer{
+    background-image: url(../imgs/MenuAberto.svg);
+}
+
+
+.containerBotao:checked~ .containerRotulo {
+    background: var(--azul-gradiente);
+}
+
+.cabecalho{
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.conteinerImagem{
+    padding: 1em;
+}
+
+.listaMenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+}
+
+.containerBotao:checked~.listaMenu {
+    display: block;
+
+}
+
+.listaMenuTitulo, .listaMenuItem{
+    padding: 1em;
+    background-color: var(--branco);
+}
+
+.listaMenuTitulo{
+    color: var(--laranja);
+    font-weight: 700;
+}
+
+.listaMenuLink{
+    background: var(--azul-gradiente);
+    background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+text-transform: uppercase;
+}
+
+
+.containerBotao{
+    display: none;
+}
+
+.containerTitulo{
+    display: none;
+}
+
+.opcoes{
+    display: none;
+}
+
+.containerTexto{
+    display: none;
+}
+
+@media screen and (min-width: 1024px){
+    .containerTitutlo, .containerTituloNegrito{
+        font-family: var(--fonte-secundaria);
+        font-size: 30px;
+    }
+
+    .containerTitulo{
+        
+    font-weight: 400;
+    display: block;
+
+    }
+
+    .containerTituloNegrito{
+        font-weight: 700;
+    }
+
+    .opcoes{
+       
+        display: flex;
+    }
+
+    .opcoesItem{
+        padding: 0 1em;
+        text-transform: uppercase;
+       
+    }
+
+    .opcoesLinks{
+        text-decoration: none;
+        color: var(--preto);
+    }
+
+    .iconFavorito{
+        display: none;
+    }
+
+    .cabecalhoMenuHamburguer {
+        display: none;
+    }
+
+    .opcoesBotao:checked~.listaMenu{
+        display: block;
+        width: auto;
+
+    }
+
+    .opcoesBotao{
+        display: none;
+    }
+
+    .opcoesBotao:checked~.opcoesRotulo > .opcoesItem {
+        background: var(--azul-gradiente);
+        color: var(--branco);
+    }
+
+    .opcoesItem {
+        padding: 2em 1em;
+    }
+
+    .listaMenuItem:hover{
+        background: var(--azul-gradiente);
+    }
+
+    .listaMenuItem:hover > .listaMenuLink {
+        -webkit-text-fill-color: var(--branco);
+        text-decoration: none;
+    }
+}
+
+@media screen and (min-width: 1728px){
+    .containerLink{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--preto);
+    }
+
+    .cabecalho{
+        padding: 0 2em;
+    }
+
+    .opcoes{
+        margin-right: auto;
+    }
+
+    .containerTexto{
+        display: block;
+    }
+}
